@@ -19,9 +19,9 @@ class GuardProcessTest < MiniTest::Unit::TestCase
     assert @guard.run_all
   end
 
-  def test_run_on_change_does_a_reload
+  def test_run_on_changes_does_a_reload
     @guard.expects(:reload)
-    @guard.run_on_change("")
+    @guard.run_on_changes("")
   end
 
   def test_start_runs_command_and_stop_stops_it
